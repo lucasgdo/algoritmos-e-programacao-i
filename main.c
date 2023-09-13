@@ -3,16 +3,20 @@
 #include <math.h>
 #include <stdio.h>
 
-int main() {
+int main()
+{
   int lista, questao;
-  do {
-    printf("Escolha a lista (1-2) (Valor negativo para encerrar): ");
+  do
+  {
+    printf("Escolha a lista (1-2) (0 para encerrar): ");
     scanf("%d", &lista);
-    switch (lista) {
+    switch (lista)
+    {
     case 1:
-      printf("Escolha a questão (1-53): ");
+      printf("Escolha a questão (1-53) (0 para encerrar): ");
       scanf("%d", &questao);
-      switch (questao) {
+      switch (questao)
+      {
       case 1:
         lista1questao01();
         break;
@@ -177,9 +181,10 @@ int main() {
       }
       break;
     case 2:
-      printf("Escolha a questão (1-6): ");
+      printf("Escolha a questão (1-6) (0 para encerrar): ");
       scanf("%d", &questao);
-      switch (questao) {
+      switch (questao)
+      {
       case 1:
         lista2questao01();
         break;
@@ -204,5 +209,5 @@ int main() {
       break;
     }
 
-  } while (lista > 0);
+  } while (lista > 0 && questao > 0);
 }
