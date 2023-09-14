@@ -1,5 +1,6 @@
 #include "lista01.h"
 #include "lista02.h"
+#include "lista03.h"
 #include <math.h>
 #include <stdio.h>
 
@@ -8,7 +9,7 @@ int main()
   int lista, questao;
   do
   {
-    printf("Escolha a lista (1-2) (0 para encerrar): ");
+    printf("Escolha a lista (1-3) (0 para encerrar): ");
     scanf("%d", &lista);
     switch (lista)
     {
@@ -202,6 +203,53 @@ int main()
         break;
       case 6:
         lista2questao06();
+        break;
+      default:
+        break;
+      }
+      break;
+    case 3:
+      printf("Escolha a questão (1-12) (0 para encerrar): ");
+      scanf("%d", &questao);
+      switch (questao)
+      {
+      case 1:
+        lista3questao01();
+        break;
+      case 2:
+        lista3questao02();
+        break;
+      case 3:
+        lista3questao03();
+        break;
+      case 4:
+        lista3questao04();
+        break;
+      case 5:
+        lista3questao05();
+        break;
+      case 6:
+        lista3questao06();
+        break;
+      case 7:
+        lista3questao07();
+        break;
+      case 8:
+        lista3questao08();
+        break;
+      case 9:
+        lista3questao09();
+        break;
+      case 10:
+        lista3questao10();
+        break;
+      case 11:
+        lista3questao11();
+        break;
+      case 12:
+        lista3questao12();
+        break;
+      default:
         break;
       }
       break;
