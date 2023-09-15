@@ -195,12 +195,98 @@ void lista3questao09()
 
 void lista3questao10()
 {
+    float peso, altura, imc;
+    char ch;
+    printf("Digite o seu peso e altura, separados por vírgula: ");
+    scanf("%f%c%f", &peso, &ch, &altura);
+    imc = peso / (altura * altura);
+    if (imc < 18.5)
+    {
+        printf("IMC: %g - Abaixo do peso\n", imc);
+    }
+    else if (imc > 18.5 && imc < 25)
+    {
+        printf("IMC: %g - Peso normal\n", imc);
+    }
+    else if (imc > 25 && imc < 30)
+    {
+        printf("IMC: %g - Acima do peso\n", imc);
+    }
+    else
+    {
+        printf("IMC: %g - Obeso\n", imc);
+    }
 }
 
 void lista3questao11()
 {
+    float preco;
+    int opcaoPagamento;
+    char ch;
+    printf("Opções de pagamento\n\
+1 - À vista - 10%% de desconto\n\
+2 - À vista no cartão de crédito - 15%% de desconto\n\
+3 - Em duas vezes, preço normal de etiqueta sem juros\n\
+4 - Em duas vezes, preço normal de etiqueta mais juros de 10%%\n\
+Digite o preço normal de etiqueta e a opção de pagamento, separados por vírgula: ");
+    scanf("%f%c%d", &preco, &ch, &opcaoPagamento);
+    switch (opcaoPagamento)
+    {
+    case 1:
+        preco = preco * 0.9;
+        break;
+    case 2:
+        preco = preco * 0.85;
+        break;
+    case 3:
+        printf("Duas parcelas de %g R$\n", preco / 2);
+        break;
+    case 4:
+        preco = preco * 1.1;
+        printf("Duas parcelas de %g R$\n", preco / 2);
+        break;
+    default:
+        printf("Opção inválida");
+        break;
+    }
+    printf("O valor a ser pago pelo produto é de: %g R$\n", preco);
 }
 
 void lista3questao12()
 {
+    int identificador;
+    float nota1, nota2, nota3, mediaExercicios, mediaTotal;
+    char ch, conceito, resultado[20];
+    printf("Digite o número de identificação, as 3 notas obtidas nas verificações e a média dos \
+exercícios, separados por vírgula: ");
+    scanf("%d%c%f%c%f%c%f%c%f", &identificador, &ch, &nota1, &ch, &nota2, &ch, &nota3, &ch, &mediaExercicios);
+    mediaTotal = (nota1 + nota2 * 2 + nota3 * 3 + mediaExercicios) / 7;
+    if (mediaTotal >= 9)
+    {
+        conceito = 'A';
+        strcpy(resultado, "Aprovado");
+    }
+    else if (mediaTotal >= 7 && mediaTotal < 9)
+    {
+        conceito = 'B';
+        strcpy(resultado, "Aprovado");
+    }
+    else if (mediaTotal >= 6 && mediaTotal < 7)
+    {
+        conceito = 'C';
+        strcpy(resultado, "Aprovado");
+    }
+    else if (mediaTotal >= 4 && mediaTotal < 6)
+    {
+        conceito = 'D';
+        strcpy(resultado, "Reprovado");
+    }
+    else
+    {
+        conceito = 'E';
+        strcpy(resultado, "Reprovado");
+    }
+    printf("Número do aluno: %d, notas: %g, %g e %g, média dos exercícios: %g, média de \
+aproveitamento: %g, conceito: %c - %s\n",
+           identificador, nota1, nota2, nota3, mediaExercicios, mediaTotal, conceito, resultado);
 }
