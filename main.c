@@ -1,19 +1,24 @@
 #include "lista01.h"
 #include "lista02.h"
 #include "lista03.h"
+#include "lista04.h"
 #include <math.h>
 #include <stdio.h>
 
-int main() {
+int main()
+{
   int lista, questao;
-  do {
-    printf("Escolha a lista (1-3) (0 para encerrar): ");
+  do
+  {
+    printf("Escolha a lista (1-4) (0 para encerrar): ");
     scanf("%d", &lista);
-    switch (lista) {
+    switch (lista)
+    {
     case 1:
       printf("Escolha a questão (1-53) (0 para encerrar): ");
       scanf("%d", &questao);
-      switch (questao) {
+      switch (questao)
+      {
       case 1:
         printf("1. Faça um programa que leia um número inteiro e o imprima.\n");
         lista1questao01();
@@ -233,7 +238,8 @@ int main() {
     case 2:
       printf("Escolha a questão (1-6) (0 para encerrar): ");
       scanf("%d", &questao);
-      switch (questao) {
+      switch (questao)
+      {
       case 1:
         lista2questao01();
         break;
@@ -259,7 +265,8 @@ int main() {
     case 3:
       printf("Escolha a questão (1-12) (0 para encerrar): ");
       scanf("%d", &questao);
-      switch (questao) {
+      switch (questao)
+      {
       case 1:
         lista3questao01();
         break;
@@ -300,9 +307,113 @@ int main() {
         break;
       }
       break;
+    case 4:
+      printf("Escolha a questão (1-32) (0 para encerrar): ");
+      scanf("%d", &questao);
+      switch (questao)
+      {
+      case 1:
+        lista4questao01();
+        break;
+      case 2:
+        lista4questao02();
+        break;
+      case 3:
+        lista4questao03();
+        break;
+      case 4:
+        lista4questao04();
+        break;
+      case 5:
+        lista4questao05();
+        break;
+      case 6:
+        lista4questao06();
+        break;
+      case 7:
+        lista4questao07();
+        break;
+      case 8:
+        lista4questao08();
+        break;
+      case 9:
+        lista4questao09();
+        break;
+      case 10:
+        lista4questao10();
+        break;
+      case 11:
+        lista4questao11();
+        break;
+      case 12:
+        lista4questao12();
+        break;
+      case 13:
+        lista4questao13();
+        break;
+      case 14:
+        lista4questao14();
+        break;
+      case 15:
+        lista4questao15();
+        break;
+      case 16:
+        lista4questao16();
+        break;
+      case 17:
+        lista4questao17();
+        break;
+      case 18:
+        lista4questao18();
+        break;
+      case 19:
+        lista4questao19();
+        break;
+      case 20:
+        lista4questao20();
+        break;
+      case 21:
+        lista4questao21();
+        break;
+      case 22:
+        lista4questao22();
+        break;
+      case 23:
+        lista4questao23();
+        break;
+      case 24:
+        lista4questao24();
+        break;
+      case 25:
+        lista4questao25();
+        break;
+      case 26:
+        lista4questao26();
+        break;
+      case 27:
+        lista4questao27();
+        break;
+      case 28:
+        lista4questao28();
+        break;
+      case 29:
+        lista4questao29();
+        break;
+      case 30:
+        lista4questao30();
+        break;
+      case 31:
+        lista4questao31();
+        break;
+      case 32:
+        lista4questao32();
+        break;
+      default:
+        break;
+      }
+      break;
     default:
       break;
     }
-
   } while (lista > 0 && questao > 0);
 }
